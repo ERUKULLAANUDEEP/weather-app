@@ -5,7 +5,7 @@ const weather = async (input) =>{
     if(!location) {
         return 'Provide valid location'; 
     }
-    const data = await fetch(`http://localhost:3000/weather?location=${input}`);
+    const data = await fetch(`/weather?location=${input}`);
     const jsonData = await data.json();
     return jsonData;
 };
